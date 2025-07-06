@@ -1,0 +1,81 @@
+extends tmpl/_layout
+
+block vars
+	- var pageId = 'tipografika'
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Типографика'},
+		];
+
+	
+
+block body
+	section.st-width
+		p
+			a(href='#') Это стандартная ссылка
+
+		p Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.</p>
+
+		p По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
+
+		br
+		br
+		div.h2 Доп. классы для текста
+		p <span class="code">text-left</span> Выравнивание текста по левому краю
+		p <span class="code">text-center</span> Выравнивание текста по центру
+		p <span class="code">text-right</span> Выравнивание текста по правому краю
+		p <span class="code">text-justify</span> Выравнивание текста по ширине
+		p <span class="code">text-uppercase</span> Все символы текста становятся прописными (верхний регистр)
+		p <span class="code">text-bold</span> Жирный текст
+
+		br
+		br
+		div.h2 Заголовки
+		h1 Заголовок - h1
+		h2 Заголовок - h2
+		h3 Заголовок - h3
+		h4 Заголовок - h4
+		h5 Заголовок - h5
+		h6 Заголовок - h6
+
+		br
+		p.h1 Это класс с названием h1
+		p.h2 Это класс с названием h2
+		p.h3 Это класс с названием h3
+		p.h4 Это класс с названием h4
+		p.h5 Это класс с названием h5
+		p.h6 Это класс с названием h6
+
+		br
+		br
+		br
+		div.h2 Кнопки
+		a.btn(href='#') Кнопка
+		br
+		br
+		a.btn.btn_border(href='#') Кнопка
+
+		br
+		br
+		div.h2 Иконки
+		.type-icon
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-twitter','ic-twitter', '28', '25')
+				.type-icon__name ic-twitter
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-youtube','ic-youtube', '30', '20')
+				.type-icon__name ic-youtube
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-discord','ic-discord', '30', '24')
+				.type-icon__name ic-discord
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-telegram','ic-telegram', '30', '30')
+				.type-icon__name ic-telegram

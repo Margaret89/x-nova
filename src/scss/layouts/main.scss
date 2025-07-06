@@ -1,0 +1,238 @@
+:root{
+	--font-unbounded: 'Unbounded', Arial, sans-serif;
+	--font-gilroy: 'Gilroy', Arial, sans-serif;
+	--font-site: var(--font-gilroy);
+	--font-header: var(--font-unbounded);
+	--font-btn: var(--font-gilroy);
+
+	--color-primary: #E16008;
+	--color-grey: #A9A9A9;
+	--color-dark-grey: #6C6C6C;
+	
+	--color-text: var(--color-dark-grey);
+	--color-link: var(--color-primary);
+	--color-link-hover: var(--color-text);
+
+	--color-danger: #E01E1E;
+	--indent: 180px;
+}
+
+html,
+body{
+	background: #0C0C0C;
+	font-family: var(--font-site);
+	@include font(500, normal, 10px, 1.5, var(--color-text));
+	box-sizing: border-box;
+}
+
+body{font-size: 1.8rem;}
+
+// body.no-scroll {
+// 	position: fixed;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	height: 100%;
+// 	overflow: hidden;
+// }
+
+img{max-width: 100%;}
+
+a{
+	color: var(--color-link);
+	transition: color 0.3s ease-in-out 0s;
+}
+
+a:hover{
+	color: var(--color-text);
+	text-decoration: none;
+}
+
+p{
+	padding: 0;
+	margin-bottom: 2rem;
+}
+
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5
+{
+	font-family: var(--font-header);
+	font-weight: 500;
+	color: #fff;
+}
+
+h1,.h1{
+	font-size: 4rem;
+	margin-bottom: 5rem;
+}
+
+h2,.h2{
+	font-size: 4rem;
+	margin-bottom: 5rem;
+}
+
+h3,.h3{
+	font-size: 2.4rem;
+	font-weight: bold;
+	line-height: 1.3;
+	margin-bottom: 5rem;
+}
+
+h4,.h4{
+	font-size: 1.8rem;
+	font-weight: bold;
+	line-height: 1.3;
+	margin-bottom: 5rem;
+}
+
+h5,.h5{
+	font-size: 1.6rem;
+	font-weight: bold;
+	line-height: 1.3;
+	margin-bottom: 5rem;
+}
+
+h6,.h6{
+	font-size: 1.5rem;
+	font-weight: bold;
+	line-height: 1.3;
+}
+
+// ol, ul{
+// 	padding-left: 20px;
+// }
+
+// ul{
+// 	list-style: none;
+// 	margin-bottom: 2rem;
+
+// 	li::before{
+// 		content: '';
+// 		display: inline-block;
+// 		vertical-align: middle;
+// 		width: 4px;
+// 		height: 4px;
+// 		border-radius: 50%;
+// 		background: var(--color-text);
+// 		margin-left: -12px;
+// 		margin-right: 8px;
+// 	}
+// }
+
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+main{
+	flex: 1 1 auto;
+	padding-bottom: var(--indent);
+	width: 100%;
+}
+
+.last-elem{margin-bottom: -var(--indent);}
+
+.st-width{
+	width: 1340px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.btn,
+input[type="submit"].btn,
+button.btn{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	height: 6rem;
+	min-width: 238px;
+	background: var(--color-primary);
+
+	background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 100%);
+	box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+	transition: all 0.3s ease;
+
+	border: 1px solid var(--color-primary);
+	border-radius: 20px;
+	font-family: var(--font-btn);
+	font-size: 1.6rem;
+	font-weight: bold;
+	line-height: 1;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	padding: 0 25px;
+	cursor: pointer;
+	transition: all 0.2s ease 0s;
+
+	.icon{flex-shrink: 0;}
+
+	&:hover{
+		transform: translateY(-2px);
+		box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+		background: linear-gradient(135deg, #FF8E53 0%, #FFB071 100%);
+		color: #fff;
+	}
+
+	&:active{
+		transform: translateY(0px);
+		box-shadow: 0 2px 10px rgba(255, 107, 53, 0.3);
+	}
+
+	&_border{
+		border: 2px solid #FF6B35;
+		background: transparent;
+		color: #FF6B35;
+
+		.icon{fill: #FF6B35;}
+	}
+
+	&_border:hover{
+		background: #FF6B35;
+		color: #fff;
+
+		.icon{fill: #fff;}
+	}
+}
+
+.m-indent{
+	margin-top: var(--indent);
+	margin-bottom: var(--indent);
+}
+
+.mt-indent{margin-top: var(--indent);}
+.mb-indent{margin-bottom: var(--indent);}
+
+.p-indent{
+	padding-top: var(--indent);
+	padding-bottom: var(--indent);
+}
+
+.pt-indent{padding-top: var(--indent);}
+.pb-indent{padding-bottom: var(--indent);}
+
+.code{
+	background-color: #f7f7f7;
+	border: 1px solid #e1e1e8;
+	color: #d14;
+	padding: 1px 4px;
+	display: inline-block;
+	font-family: monospace, arial;
+	border-radius: 3px;
+}
+
+.text-left{text-align: left !important;}
+.text-center{text-align: center !important;}
+.text-right{text-align: right !important;}
+.text-justify{text-align: justify !important;}
+.text-uppercase{text-transform: uppercase !important;}
+.text-bold {font-weight: 700 !important;}
+.text-color {color: var(--color-primary) !important;}

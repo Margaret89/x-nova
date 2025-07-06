@@ -1,0 +1,13 @@
+{
+	"pages":{
+		"main":{
+			"href": "main.html",
+			"title":"Главная"
+		},
+		"tipografika":{
+			"href": "tipografika.html",
+			"title":"Типографика",
+			"h1":"Типографика"
+		}
+	}
+}

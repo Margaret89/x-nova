@@ -1,0 +1,17 @@
+header.header
+	.st-width
+		.header__content
+			.header__logo
+				img(src="/upload/logo.svg", alt="")
+
+			ul.main-menu
+				-
+					var list=[
+						{link:'features', text:'Features',},
+						{link:'benefits', text:'Benefits',},
+						{link:'how-works', text:'How it works',},
+						{link:'contact', text:'Contact',},
+					]
+				each item in list
+					li.main-menu__item
+						span(data-move=item.link).js-link-move= item.text

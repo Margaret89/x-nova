@@ -1,0 +1,163 @@
+extends tmpl/_layout
+
+block vars
+	- var pageId = 'main'
+
+block body
+	section.main-block.js-to-move(data-move="features")
+		.st-width
+			.main-block__img
+				img(src="/upload/phones.png", alt="")
+
+			.main-block__content
+				h1
+					|Let AI trade for you!
+					br
+					|X-NOVA Trading Bot for EXNOVA
+
+				p X-NOVA Bot uses cutting-edge AI algorithms to automate your strategy on the EXNOVA platform — with real-time analysis and precision execution. You stay in full control via Telegram. No emotions. No delays. Just pure performance.
+			
+			.main-block__btn
+				a(href="#").btn Get started
+				a(href="#").btn.btn_border Demo
+
+	section.records-wrap.mb-indent
+		.st-width
+			h2 Our numbers
+
+			.records-list
+				-
+					var list=[
+						{img:'record1.png', num:'$230', text:'Average deposit'},
+						{img:'record2.png', num:'2 246', text:'Active clients'},
+						{img:'record3.png', num:'$1 881 494', text:'Allocated funds'},
+					]
+				each item in list
+					.record-item
+						.record-item__img
+							img(src="/upload/"+item.img, alt="")
+
+						.record-item__content
+							.record-item__num= item.num
+							.record-item__text= item.num
+
+	section.advantages-wrap.m-indent.js-to-move(data-move="benefits")
+		.st-width
+			h2 Key benefits of X-NOVA Bot 
+
+			.advantages-block-list
+				-
+					var list=[
+						{img:'screen1.png', title:'Полный контроль через Telegram', text:'Управляйте сделками прямо из Telegram — без дополнительных приложений.'},
+						{img:'screen2.png', title:'Точность на основе ИИ', text:'Бот анализирует рынки и исполняет ордера быстро и без эмоций.'},
+						{img:'screen3.png', title:'Безрисковый демо-режим', text:'Тестируйте стратегию в демо-режиме без риска.'},
+					]
+				each item in list
+					.advantage-block
+						.advantage-block__content
+							.advantage-block__title= item.title
+							.advantage-block__text= item.text
+
+						.advantage-block__img
+							img(src="/upload/"+item.img, alt="")
+
+			.advantages-list
+				-
+					var list=[
+						{title:'Поддержка 24/7', text:'Круглосуточная помощь команды — мгновенные ответы в любой ситуации'},
+						{title:'Множество стратегий', text:'Несколько готовых стратегий или настройка под ваш риск-профиль.'},
+						{title:'Подробная аналитика', text:'Полная статистика по сделкам и аналитика для оптимизации.'},
+					]
+				each item in list
+					.advantage-item
+						.advantage-item__title= item.title
+						.advantage-item__text= item.text
+	
+	section.works-wrap.m-indent.js-to-move(data-move="how-works")
+		.st-width
+			h2 Как это работает
+
+			.steps
+				-
+					var list=[
+						{num:'1', title:'Open X-NOVA Bot in Telegram', text:'Круглосуточная помощь команды — мгновенные ответы в любой ситуации', img:'telegram.png'},
+						{num:'2', title:'Create account', text:'Создайте быстро аккаунт привязав почту', img:'account.png'},
+						{num:'3', title:'Set up the robot and try it on Demo', text:'Получите доступ к дополнительным инструментам для улучшения вашего опыта', img:'robot.png'},
+						{num:'4', title:'Make a deposit and start trading for real', text:'Получайте полную аналитику прямо во время торговли', img:'deposit.png'},
+					]
+				each item in list
+					.step
+						.step__num= item.num
+
+						.step__content
+							.step__title= item.title
+							.step__text= item.text
+
+						.step__img
+							img(src="/upload/"+item.img, alt="")
+							
+	section.calc-wrap.m-indent
+		.st-width
+			h2 Bot Prediction: Highest chance to win right now
+
+			.calc
+				.calc__item
+					.calc__label Выберите валютную пару
+
+					.calc__val
+						.calc__check
+							-
+								var list=[
+									{text:'EUR/CAD', status:'active'},
+									{text:'ADA/USD'},
+									{text:'XAU/USD'},
+									{text:'BCH/USD'},
+								]
+							each item in list
+								label.value-check
+									if(item.status)
+										input(type='checkbox', checked='checked')
+									else
+										input(type='checkbox')
+
+									span.value-check__text= item.text
+
+					.calc__note Expected win rate: 92%
+
+				.calc__item.calc__item_half
+					.calc__label Сумма депозита
+
+					.calc__val
+						.range.js-range
+							.range__slider
+								#slider-range.js-slider-range(data-min="0", data-max="10000",data-cur-min="1000", autocomplete="off", data-unit="$")
+
+							.range__val
+								//- input#slider-range-val.js-slider-range-val(type="text")
+								#slider-range-val.js-slider-range-val $ 1 000
+							
+				.calc__item.calc__item_half
+					.calc__label Длительность
+
+					.calc__val
+						.range.js-range
+							.range__slider
+								#slider-range.js-slider-range(data-min="0", data-max="10",data-cur-min="5", autocomplete="off", data-unit="мин")
+
+							.range__val
+								//- input#slider-range-val.js-slider-range-val(type="text")
+								#slider-range-val.js-slider-range-val 5 мин
+
+				.calc-result
+					.calc-result__label Рассчет прибыли
+					.calc-result__val $ 1 000
+
+	section.info-card.mt-indent
+		.st-width
+			.info-card__content
+				h2 Get your first results today
+
+				.info-card__text
+					p Start with your demo account and experience the power of automated trading with no risk
+
+			a(href="#").btn.btn_white Try X-NOVA bot now

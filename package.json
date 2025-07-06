@@ -1,0 +1,23 @@
+{
+  "name": "vite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --mode legacy",
+    "b": "vite build",
+    "static": "vite build --mode static",
+    "bitrix": "vite build --mode bitrix",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "globule": "^1.3.4",
+    "pug": "^3.0.2",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "sass": "^1.72.0",
+    "vite": "^5.2.0",
+    "vite-svg-sprite-wrapper": "^1.3.0"
+  },
+  "dependencies": {}
+}

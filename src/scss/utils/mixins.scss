@@ -1,0 +1,33 @@
+@mixin font($font-style, $font-weight, $font-size, $line-height, $font-color) {
+	@if $font-style != none {
+		font-style: $font-style;
+	}
+	
+	@if $font-weight != none {
+		font-weight: $font-weight;
+	}
+
+	@if $font-size != none {
+		font-size: $font-size;
+	}
+
+	@if $line-height != none {
+		line-height: $line-height;
+	}
+
+	@if $font-color != none {
+		color: $font-color;
+	}
+}
+
+
+@mixin top-center {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin reset-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}

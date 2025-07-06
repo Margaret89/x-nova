@@ -1,0 +1,14 @@
+mixin breadcrumbs(links)
+	- var len=links.length
+	ul.breadcrumb
+		- var i=0
+		while i < len-1
+			li.breadcrumb__item
+				a(href=links[i].href).breadcrumb__link=links[i].name
+			- i++
+		li.breadcrumb__item
+			span=links[i].name
+
+mixin svg(icon, name_class, width,height)
+	svg.icon(class=name_class?name_class:'', width=width?width:'', height=height?height:'')
+		use(xlink:href='../sprites/sprite.svg#'+icon)

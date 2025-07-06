@@ -1,0 +1,21 @@
+/*-------------- type-icon -----------------*/
+.type-icon{
+	display: flex;
+	flex-wrap: wrap;
+
+	&__item{
+		width: 100px;
+		margin: 15px;
+		text-align: center;
+	}
+
+	&__img{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100px;
+		width: 100%;
+	}
+
+	&_white{color: #fff;}
+}

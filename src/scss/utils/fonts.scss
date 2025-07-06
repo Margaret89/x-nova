@@ -1,0 +1,61 @@
+//Unbounded
+@font-face {
+	font-family: 'Unbounded';
+	src: local('Unbounded Regular'), local('Unbounded-Regular'),
+		url('../fonts/Unbounded/Unbounded-Regular.woff2') format('woff2'),
+		url('../fonts/Unbounded/Unbounded-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Unbounded';
+	src: local('Unbounded Bold'), local('Unbounded-Bold'),
+		url('../fonts/Unbounded/Unbounded-Bold.woff2') format('woff2'),
+		url('../fonts/Unbounded/Unbounded-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+//Gilroy
+@font-face {
+	font-family: 'Gilroy';
+	src: local('Gilroy Regular'), local('Gilroy-Regular'),
+		url('../fonts/Gilroy/Gilroy-Regular.woff2') format('woff2'),
+		url('../fonts/Gilroy/Gilroy-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: local('Gilroy Medium'), local('Gilroy-Medium'),
+		url('../fonts/Gilroy/Gilroy-Medium.woff2') format('woff2'),
+		url('../fonts/Gilroy/Gilroy-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: local('Gilroy MediumItalic'), local('Gilroy-MediumItalic'),
+		url('../fonts/Gilroy/Gilroy-MediumItalic.woff2') format('woff2'),
+		url('../fonts/Gilroy/Gilroy-MediumItalic.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: local('Gilroy Bold'), local('Gilroy-Bold'),
+		url('../fonts/Gilroy/Gilroy-Bold.woff2') format('woff2'),
+		url('../fonts/Gilroy/Gilroy-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}

@@ -1,0 +1,63 @@
+footer.footer
+	.st-width
+		.footer-menu
+			.footer-menu__sect
+				.footer-menu__title Quick Links
+				
+				ul.footer-menu__list
+					-
+						var list=[
+							{text:'Features'},
+							{text:'Benefits'},
+							{text:'How It Works'},
+							{text:'Contact'},
+						]
+					each item in list
+						li.footer-menu__item
+							a(href="#")= item.text
+
+			.footer-menu__sect
+				.footer-menu__title Legal
+				
+				ul.footer-menu__list
+					-
+						var list=[
+							{text:'Privacy Policy'},
+							{text:'Terms of Use'},
+						]
+					each item in list
+						li.footer-menu__item
+							a(href="#")= item.text
+
+			.footer-menu__sect
+				.footer-menu__title Contact
+				
+				ul.footer-menu__list
+					-
+						var list=[
+							{text:'Find us on Telegram: X-NOVA CHAT'},
+						]
+					each item in list
+						li.footer-menu__item
+							a(href="#")= item.text
+
+		.bot
+			.bot__label Бот поддержки
+			.bot__val @xnova_support_bot
+
+		.social
+			.social__item
+				+svg('ic-twitter','ic-twitter', '28', '25')
+				
+			.social__item
+				+svg('ic-youtube','ic-youtube', '30', '20')
+
+			.social__item
+				+svg('ic-discord','ic-discord', '30', '24')
+
+			.social__item
+				+svg('ic-telegram','ic-telegram', '30', '30')
+
+		.footer__text Risk warning: Trading involves high risks, including the risk of losing some or all of your investment amount, and may not be suitable for all investors. Please ensure that you fully understand the risks involved before trading.
+
+		.footer__copyright © 2025 X-NOVA Bot. All rights reserved.
