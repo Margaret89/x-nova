@@ -58,6 +58,28 @@ block body
 
 		br
 		br
+		br
+		.h2 Нестандартный select
+		select.js-select(name="deposit")
+			option(value="") Выберите депозит
+			option(value="$230") $230
+			option(value="$500") $500
+			option(value="$1000") $1000
+			option(value="$2000+") $2000+
+
+		br
+		br
+		br
+		.h2 Нестандартный checkbox
+		label.input-check
+			input(type='checkbox')
+			span.input-check__mark
+				+svg('ic-check','ic-check', '10', '8')
+			span.input-check__text Текст
+
+
+		br
+		br
 		div.h2 Иконки
 		.type-icon
 			.type-icon__item
@@ -79,3 +101,8 @@ block body
 				.type-icon__img
 					+svg('ic-telegram','ic-telegram', '30', '30')
 				.type-icon__name ic-telegram
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-check','ic-check', '12', '10')
+				.type-icon__name ic-check

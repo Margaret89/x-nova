@@ -4,22 +4,26 @@ block vars
 	- var pageId = 'main'
 
 block body
-	section.main-block.js-to-move(data-move="features")
-		.st-width
-			.main-block__img
+	section.main-block(id="features")
+		canvas.bg-animate.js-bg-animate
+
+		.main-block__img
+			.st-width
 				img(src="/upload/phones.png", alt="")
 
-			.main-block__content
-				h1
-					|Let AI trade for you!
-					br
-					|X-NOVA Trading Bot for EXNOVA
+		.main-block__content
+			.st-width
+				.main-block__info
+					h1
+						|Let AI trade for you!
+						br
+						|X-NOVA Trading Bot for EXNOVA
 
-				p X-NOVA Bot uses cutting-edge AI algorithms to automate your strategy on the EXNOVA platform — with real-time analysis and precision execution. You stay in full control via Telegram. No emotions. No delays. Just pure performance.
+					p X-NOVA Bot uses cutting-edge AI algorithms to automate your strategy on the EXNOVA platform — with real-time analysis and precision execution. You stay in full control via Telegram. No emotions. No delays. Just pure performance.
 			
-			.main-block__btn
-				a(href="#").btn Get started
-				a(href="#").btn.btn_border Demo
+				.main-block__btn
+					a(href="#", data-fancybox, data-src="#get-started").btn Get started
+					a(href="#", data-fancybox, data-src="#demo").btn.btn_border Demo
 
 	section.records-wrap.mb-indent
 		.st-width
@@ -28,9 +32,9 @@ block body
 			.records-list
 				-
 					var list=[
-						{img:'record1.png', num:'$230', text:'Average deposit'},
-						{img:'record2.png', num:'2 246', text:'Active clients'},
-						{img:'record3.png', num:'$1 881 494', text:'Allocated funds'},
+						{img:'record1.png', sign:'$', num:'230', text:'Average deposit'},
+						{img:'record2.png', num:'2246', text:'Active clients'},
+						{img:'record3.png', sign:'$', num:'1881494', text:'Allocated funds'},
 					]
 				each item in list
 					.record-item
@@ -38,10 +42,10 @@ block body
 							img(src="/upload/"+item.img, alt="")
 
 						.record-item__content
-							.record-item__num= item.num
-							.record-item__text= item.num
+							.record-item__num.js-countup(data-num=item.num, data-sign=item.sign) 0
+							.record-item__text= item.text
 
-	section.advantages-wrap.m-indent.js-to-move(data-move="benefits")
+	section.advantages-wrap.m-indent(id="benefits")
 		.st-width
 			h2 Key benefits of X-NOVA Bot 
 
@@ -58,7 +62,7 @@ block body
 							.advantage-block__title= item.title
 							.advantage-block__text= item.text
 
-						.advantage-block__img
+						.advantage-block__img.js-animate
 							img(src="/upload/"+item.img, alt="")
 
 			.advantages-list
@@ -69,11 +73,11 @@ block body
 						{title:'Подробная аналитика', text:'Полная статистика по сделкам и аналитика для оптимизации.'},
 					]
 				each item in list
-					.advantage-item
+					.advantage-item.js-animate
 						.advantage-item__title= item.title
 						.advantage-item__text= item.text
 	
-	section.works-wrap.m-indent.js-to-move(data-move="how-works")
+	section.works-wrap.m-indent(id="how-works")
 		.st-width
 			h2 Как это работает
 
@@ -101,56 +105,55 @@ block body
 			h2 Bot Prediction: Highest chance to win right now
 
 			.calc
-				.calc__item
-					.calc__label Выберите валютную пару
+				.calc__content
+					.calc__item
+						.calc__label Выберите валютную пару
 
-					.calc__val
-						.calc__check
-							-
-								var list=[
-									{text:'EUR/CAD', status:'active'},
-									{text:'ADA/USD'},
-									{text:'XAU/USD'},
-									{text:'BCH/USD'},
-								]
-							each item in list
-								label.value-check
-									if(item.status)
-										input(type='checkbox', checked='checked')
-									else
-										input(type='checkbox')
+						.calc__val
+							.calc__check
+								-
+									var list=[
+										{text:'EUR/CAD', status:'active'},
+										{text:'ADA/USD'},
+										{text:'XAU/USD'},
+										{text:'BCH/USD'},
+									]
+								each item in list
+									label.value-check
+										if(item.status)
+											input(type='checkbox', checked='checked')
+										else
+											input(type='checkbox')
 
-									span.value-check__text= item.text
+										span.value-check__text= item.text
 
-					.calc__note Expected win rate: 92%
+						.calc__note Expected win rate: 92%
 
-				.calc__item.calc__item_half
-					.calc__label Сумма депозита
+					.calc__item.calc__item_half
+						.calc__label Сумма депозита
 
-					.calc__val
-						.range.js-range
-							.range__slider
-								#slider-range.js-slider-range(data-min="0", data-max="10000",data-cur-min="1000", autocomplete="off", data-unit="$")
+						.calc__val
+							.range.js-range
+								.range__slider
+									.js-slider-range(data-min="0", data-max="10000",data-cur-min="1000", autocomplete="off", data-unit="$", data-step="1000")
 
-							.range__val
-								//- input#slider-range-val.js-slider-range-val(type="text")
-								#slider-range-val.js-slider-range-val $ 1 000
-							
-				.calc__item.calc__item_half
-					.calc__label Длительность
+								.range__val
+									#slider-range-val.js-slider-range-val $ 1 000
+								
+					.calc__item.calc__item_half
+						.calc__label Длительность
 
-					.calc__val
-						.range.js-range
-							.range__slider
-								#slider-range.js-slider-range(data-min="0", data-max="10",data-cur-min="5", autocomplete="off", data-unit="мин")
+						.calc__val
+							.range.js-range
+								.range__slider
+									.js-slider-range(data-min="0", data-max="10",data-cur-min="5", autocomplete="off", data-unit="мин", data-step="1")
 
-							.range__val
-								//- input#slider-range-val.js-slider-range-val(type="text")
-								#slider-range-val.js-slider-range-val 5 мин
+								.range__val
+									#slider-range-val.js-slider-range-val 5 мин
 
-				.calc-result
-					.calc-result__label Рассчет прибыли
-					.calc-result__val $ 1 000
+					.calc-result
+						.calc-result__label Рассчет прибыли
+						.calc-result__val $ 1 000
 
 	section.info-card.mt-indent
 		.st-width
@@ -160,4 +163,89 @@ block body
 				.info-card__text
 					p Start with your demo account and experience the power of automated trading with no risk
 
-			a(href="#").btn.btn_white Try X-NOVA bot now
+				a(href="#", data-fancybox, data-src="#demo").btn.btn_white Try X-NOVA bot now
+
+	#get-started.popup-form
+		.valid-form.js-valid-form
+			form.form-site(action="/main.html")
+				.form-site__title Начните торговать с X-NOVA Bot
+
+				.form-site__content
+					.form-site__item.js-form-site-item
+						.form-site__label Email*
+
+						.form-site__field
+							input(name="email", type="email", required="required", placeholder=" ")
+
+					.form-site__item.js-form-site-item
+						.form-site__label Имя*
+
+						.form-site__field
+							input(name="name", type="text", required="required", placeholder=" ")
+
+
+					.form-site__item.js-form-site-item
+						.form-site__label Telegram username*
+
+						.form-site__field
+							input(name="telegram-username", type="text", required="required", placeholder=" ")
+
+
+					.form-site__item.js-form-site-item
+						.form-site__label Размер депозита
+
+						.form-site__field
+							select.js-select(name="deposit")
+								option(value="") Выберите депозит
+								option(value="$230") $230
+								option(value="$500") $500
+								option(value="$1000") $1000
+								option(value="$2000+") $2000+
+
+				.form-site__polit
+					label.input-check
+						input(type='checkbox', required="required", checked="checked")
+						span.input-check__mark
+							+svg('ic-check','ic-check', '12', '10')
+						span.input-check__text Я согласен на обработку моих 
+							a(href="#") персональных данных
+
+				.form-site__btn
+					input(type="submit", value="Создать аккаунт").btn.btn_brown.js-btn-submit
+	
+	#demo.popup-form
+		.valid-form.js-valid-form
+			form.form-site(action="/main.html")
+				.form-site__title Попробуйте X-NOVA Bot бесплатно
+
+				.form-site__content
+					.form-site__item.js-form-site-item
+						.form-site__label Email*
+
+						.form-site__field
+							input(name="email", type="email", required="required", placeholder=" ")
+
+					.form-site__item.js-form-site-item
+						.form-site__label Имя*
+
+						.form-site__field
+							input(name="name", type="text", required="required", placeholder=" ")
+
+
+					.form-site__item.js-form-site-item
+						.form-site__label Telegram username
+
+						.form-site__field
+							input(name="telegram-username", type="text", placeholder=" ")
+
+
+				.form-site__polit
+					label.input-check
+						input(type='checkbox', required="required", checked="checked")
+						span.input-check__mark
+							+svg('ic-check','ic-check', '12', '10')
+						span.input-check__text Я согласен на обработку моих 
+							a(href="#") персональных данных
+
+				.form-site__btn
+					input(type="submit", value="Получить демо доступ").btn.btn_brown.js-btn-submit

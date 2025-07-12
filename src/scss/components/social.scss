@@ -1,0 +1,28 @@
+/*-------------- social -----------------*/
+.social{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+
+	&__item{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 64px;
+		height: 64px;
+		border-radius: 12px;
+		text-decoration: none;
+		background: #2F2F2F;
+		transition: all 0.3s ease-in-out;
+
+		.icon{
+			color: var(--color-primary);
+			transition: all 0.3s ease-in-out;
+		}
+
+		&:hover{
+			background: var(--color-primary);
+			.icon{color: #fff;}
+		}
+	}
+}

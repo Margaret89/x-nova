@@ -1,0 +1,14 @@
+/*-------------- bot -----------------*/
+.bot{
+	&__label{
+		font-size: 1.8rem;
+		color: rgba(255, 255, 255, 0.5);
+		margin-bottom: 5px;
+	}
+
+	&__val{
+		font-family: var(--font-unbounded);
+		font-size: 3rem;
+		color: var(--color-primary);
+	}
+}

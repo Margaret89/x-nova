@@ -1,0 +1,19 @@
+/*-------------- info-card -----------------*/
+.info-card{
+	&__content{
+		border-radius: 30px;
+		background: var(--color-primary);
+		padding: 163px 70px;
+		color: #fff;
+	}
+
+	h2, .h2{margin-bottom: 1.7rem;}
+
+	&__text{
+		width: 410px;
+		max-width: 100%;
+		line-height: 1.8;
+	}
+
+	.btn{margin-top: 26px;}
+}

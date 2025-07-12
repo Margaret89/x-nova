@@ -1,0 +1,25 @@
+/*-------------- main-menu -----------------*/
+.main-menu{
+	&,
+	&__item{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&{
+		display: flex;
+		align-items: center;
+		gap: 83px;
+	}
+
+	&__item{
+		font-size: 1.8rem;
+		line-height: 1;
+		color: #fff;
+		transition: all 0.3s ease-in-out;
+		cursor: pointer;
+
+		&:hover{color: var(--color-primary);}
+	}
+}

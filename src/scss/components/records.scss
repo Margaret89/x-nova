@@ -1,0 +1,49 @@
+/*-------------- records -----------------*/
+.records-list{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.record-item{
+	width: calc(33.33% - 13.33px);
+	min-height: 274px;
+	border-radius: 23px;
+	border: 1px solid #2A2A2A;
+	overflow: hidden;
+	position: relative;
+
+	&__img{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+
+	&__content{
+		padding: 35px;
+		color: #fff;
+		position: relative;
+	}
+
+	&__num{
+		font-family: var(--font-unbounded);
+		font-size: 2.4rem;
+		font-weight: bold;
+		line-height: 1.3;
+	}
+
+	&__text{
+		font-size: 1.8rem;
+		margin-top: 5px;
+	}
+
+	&:nth-child(3n + 1){
+		background: #0C0C0C;
+		background: linear-gradient(225deg,rgba(12, 12, 12, 1) 0%, rgba(12, 12, 12, 1) 66%, rgba(225, 96, 8, 0.6) 100%);
+	}
+
+	&:nth-child(3n){
+		background: #0C0C0C;
+		background: linear-gradient(127deg, rgb(12, 12, 12) 0%, rgb(12, 12, 12) 76%, rgba(225, 96, 8, 0.6) 100%);
+	}
+}

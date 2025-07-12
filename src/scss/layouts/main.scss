@@ -21,7 +21,7 @@ html,
 body{
 	background: #0C0C0C;
 	font-family: var(--font-site);
-	@include font(500, normal, 10px, 1.5, var(--color-text));
+	@include font(normal, 500, 10px, 1.5, var(--color-text));
 	box-sizing: border-box;
 }
 
@@ -66,11 +66,13 @@ h5,.h5
 
 h1,.h1{
 	font-size: 4rem;
-	margin-bottom: 5rem;
+	letter-spacing: 0.5px;
+	margin-bottom: 1.7rem;
 }
 
 h2,.h2{
 	font-size: 4rem;
+	letter-spacing: 0.5px;
 	margin-bottom: 5rem;
 }
 
@@ -140,9 +142,12 @@ main{
 .last-elem{margin-bottom: -var(--indent);}
 
 .st-width{
-	width: 1340px;
-	margin-left: 50px;
-	margin-right: 50px;
+	width: 1440px;
+	max-width: 100%;
+	padding-left: 50px;
+	padding-right: 50px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .btn,
@@ -188,18 +193,24 @@ button.btn{
 	}
 
 	&_border{
-		border: 2px solid #FF6B35;
+		border: 2px solid #fff;
 		background: transparent;
-		color: #FF6B35;
-
-		.icon{fill: #FF6B35;}
-	}
-
-	&_border:hover{
-		background: #FF6B35;
 		color: #fff;
 
 		.icon{fill: #fff;}
+	}
+
+	&_border:hover{
+		background: var(--color-primary);
+		border-color: var(--color-primary);
+		color: #fff;
+
+		.icon{fill: #fff;}
+	}
+
+	&_white{
+		background: #fff;
+		color: var(--color-primary);
 	}
 }
 

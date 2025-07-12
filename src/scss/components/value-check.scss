@@ -1,0 +1,19 @@
+/*-------------- value-check -----------------*/
+.value-check{
+	font-family: var(--font-unbounded);
+	font-size: 2.4rem;
+	font-weight: bold;
+	color: var(--color-grey);
+	text-transform: uppercase;
+	margin: 0;
+	cursor: pointer;
+
+	&__text{transition: all 0.3s ease-in-out;}
+
+	input[type=checkbox]{display: none;}
+
+	input[type=checkbox]:checked + &__text,
+	&:hover &__text{
+		color: #fff;
+	}
+}

@@ -1,0 +1,64 @@
+/*-------------- nouislider -----------------*/
+body .noUi-horizontal{height: 4px;}
+body .noUi-connect{background: var(--color-primary);}
+body .noUi-marker-horizontal.noUi-marker.noUi-marker-normal{display: none;}
+body .noUi-value-horizontal{font-size: 0;}
+
+body .noUi-marker-horizontal.noUi-marker{
+	width: 2px;
+	height: 2px;
+	border-radius: 50%;
+	background: #000;
+}
+
+body .noUi-pips-horizontal{
+	width: 100%;
+	height: 2px;
+	padding: 0;
+	top: 1px;
+	left: 0;
+}
+
+body .noUi-target{
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 2px;
+	border: none;
+	box-shadow: none;
+}
+
+body .noUi-horizontal .noUi-handle{
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	border: none;
+	box-shadow: none;
+	background: var(--color-primary);
+	right: -18px;
+	top: -18px;
+
+	&::before,
+	&::after{
+		display: none;
+	}
+}
+
+.range{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	margin-top: 10px;
+
+	&__slider{width: 100%;}
+
+	&__val{
+		flex-shrink: 0;
+		width: 150px;
+		font-family: var(--font-unbounded);
+		font-size: 2.4rem;
+		font-weight: bold;
+		line-height: 1.3;
+		color: #F9F9F9;
+		white-space: nowrap;
+	}
+}

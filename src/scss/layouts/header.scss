@@ -1,0 +1,14 @@
+.header{
+	position: relative;
+	z-index: 10;
+	
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 30px;
+		height: 147px;
+
+		a{text-decoration: none;}
+	}
+}

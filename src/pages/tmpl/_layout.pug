@@ -15,10 +15,8 @@ html(lang="ru")
 			include ./_header
 			main
 				if breadcrumbs 
-					.container
-						.row
-							.col-12
-								+breadcrumbs(breadcrumbs)
+					.st-width
+						+breadcrumbs(breadcrumbs)
 				
 				if pages && pageId && pages[pageId] && pages[pageId].h1
 					h1  #{pages[pageId].h1}
