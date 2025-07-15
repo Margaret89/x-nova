@@ -47,3 +47,19 @@
 		background: linear-gradient(127deg, rgb(12, 12, 12) 0%, rgb(12, 12, 12) 76%, rgba(225, 96, 8, 0.6) 100%);
 	}
 }
+
+@media (max-width: 991px) {
+	.record-item{
+		width: 100%;
+		min-height: 204px;
+	}
+}
+
+@media (max-width: 767px) {
+	.record-item{
+		&__img{
+			max-width: 180px;
+			bottom: -18px;
+		}
+	}
+}

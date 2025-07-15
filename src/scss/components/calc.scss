@@ -57,3 +57,32 @@
 		color: #fff;
 	}
 }
+
+@media (max-width: 991px) {
+	.calc{
+		&__item_half{width: 100%;}
+	}
+}
+
+@media (max-width: 767px) {
+	.calc-wrap{
+		h2, .h2{display: none;}
+	}
+
+	.calc{
+		border: 1px solid #2A2A2A;
+		padding: 30px;
+
+		&__check{gap: 16px;}
+
+		&__note{
+			font-size: 2rem;
+			margin-top: 28px;
+		}
+	}
+
+	.calc-result{
+		&__label{margin-bottom: 10px;}
+		&__val{font-size: 2.8rem;}
+	}
+}

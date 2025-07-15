@@ -62,3 +62,17 @@ body .noUi-horizontal .noUi-handle{
 		white-space: nowrap;
 	}
 }
+
+@media (max-width: 767px) {
+	.range{
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 17px;
+		margin-top: 27px;
+
+		&__val{
+			width: 100%;
+			font-size: 2rem;
+		}
+	}
+}

@@ -40,6 +40,37 @@
 		top: 0;
 		left: 0;
 		z-index: 0;
-		// background: red;
+	}
+}
+
+@media (max-width: 767px) {
+	.main-block{
+		overflow: hidden;
+		margin-bottom: 100px;
+
+		&__img{
+			margin: 57px -150px 0;
+			position: relative;
+
+			&::before{
+				content: '';
+				display: block;
+				width: 523px;
+				height: 456px;
+				background: #E16008;
+				background: radial-gradient(circle,rgba(225, 96, 8, 0.6) 0%, rgba(12, 12, 12, 0) 58%, rgb(12, 12, 12) 100%);
+				position: absolute;
+				left: 50%;
+				bottom: 0;
+				transform: translateX(-50%);
+			}
+		}
+
+		&__content{margin-top: -386px;}
+
+		&__btn{
+			margin-top: 32px;
+			.btn{min-width: 164px;}
+		}
 	}
 }

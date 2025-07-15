@@ -17,3 +17,16 @@
 
 	.btn{margin-top: 26px;}
 }
+
+@media (max-width: 991px) {
+	.info-card{
+		&__content{padding: 70px;}
+	}
+}
+
+@media (max-width: 767px) {
+	.info-card{
+		&__content{padding: 70px 26px;}
+		&__text{font-size: 1.8rem;}
+	}
+}

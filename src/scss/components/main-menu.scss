@@ -23,3 +23,11 @@
 		&:hover{color: var(--color-primary);}
 	}
 }
+
+@media (max-width: 991px) {
+	.main-menu{gap: 30px;}
+}
+
+@media (max-width: 767px) {
+	.main-menu{display: none;}
+}

@@ -1,4 +1,6 @@
 .footer{
+	padding-bottom: 40px;
+	
 	&__content{
 		display: flex;
 		flex-direction: column;
@@ -15,6 +17,7 @@
 
 .footer-menu{
 	display: flex;
+	flex-wrap: wrap;
 	gap: 190px;
 	margin-bottom: -30px;
 
@@ -47,5 +50,25 @@
 
 			&:hover{color: var(--color-primary);}
 		}
+	}
+}
+
+@media (max-width: 991px) {
+	.footer-menu{
+		justify-content: space-between;
+		gap: 20px;
+	}
+}
+
+@media (max-width: 767px) {
+	.footer-menu{
+		gap: 42px 60px;
+
+		&__title{
+			font-size: 2rem;
+			margin-bottom: 14px;
+		}
+
+		&__item{margin-bottom: 15px;}
 	}
 }

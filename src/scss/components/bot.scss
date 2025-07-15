@@ -12,3 +12,12 @@
 		color: var(--color-primary);
 	}
 }
+
+@media (max-width: 767px) {
+	.bot{
+		&__val{
+			font-size: 2rem;
+			color: #fff;
+		}
+	}
+}
